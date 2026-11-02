@@ -1,0 +1,85 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #ffe3ee, #f3e5ff, #ffeef4);
+  background-size: 300% 300%;
+  animation: bg 12s ease infinite;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: #7a2e52;
+}
+@keyframes bg { 50% { background-position: 100% 50%; } }
+
+.slide { display: none; width: 100%; padding: 20px; position: relative; z-index: 2; }
+.slide.active { display: grid; place-items: center; animation: fade .8s ease; }
+@keyframes fade { from { opacity: 0; transform: translateY(20px); } }
+
+.card {
+  width: min(380px, 100%);
+  padding: 36px 28px;
+  text-align: center;
+  background: rgba(255, 255, 255, .75);
+  backdrop-filter: blur(10px);
+  border-radius: 28px;
+  box-shadow: 0 20px 50px rgba(255, 105, 150, .25);
+}
+.card.wide { width: min(460px, 100%); padding: 28px 22px; }
+
+.gift { font-size: 56px; animation: bounce 2s infinite; }
+@keyframes bounce { 50% { transform: translateY(-10px); } }
+
+h2 { margin: 12px 0 6px; font-size: 22px; }
+.hint { font-size: 13px; opacity: .7; margin-bottom: 18px; }
+
+input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 2px solid #ffc2d6;
+  border-radius: 14px;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  transition: .3s;
+}
+input:focus { border-color: #ff5d8f; box-shadow: 0 0 0 4px rgba(255, 93, 143, .15); }
+
+button {
+  margin-top: 14px;
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #ff7eb3, #ff5d8f);
+  cursor: pointer;
+  transition: .25s;
+}
+button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(255, 93, 143, .4); }
+
+#error { margin-top: 12px; min-height: 18px; font-size: 13px; color: #d6336c; }
+.shake { animation: shake .4s; }
+@keyframes shake { 25% { transform: translateX(-8px); } 75% { transform: translateX(8px); } }
+
+/* Wish slide */
+h1 { font-family: "Georgia", serif; font-size: 28px; line-height: 1.3; }
+.bouquet { width: 80%; max-width: 280px; margin: 8px auto; display: block; filter: drop-shadow(0 10px 14px rgba(255, 105, 150, .25)); }
+.line { opacity: 0; animation: rise .9s ease forwards; }
+.l1 { animation-delay: .3s; }
+.l2 { animation-delay: 2.6s; font-size: 20px; margin-top: 6px; }
+.l3 { animation-delay: 3.6s; font-size: 20px; margin-top: 8px; font-weight: 600; color: #e0457b; }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+.bloom { transform-box: fill-box; transform-origin: center bottom; transform: scale(0); animation: grow .8s cubic-bezier(.2, 1.4, .4, 1) forwards; }
+.d1 { animation-delay: .8s; } .d2 { animation-delay: 1s; } .d3 { animation-delay: 1.2s; }
+.d4 { animation-delay: 1.4s; } .d5 { animation-delay: 1.7s; }
+@keyframes grow { to { transform: scale(1); } }
+
+/* Floating hearts */
+#hearts { position: fixed; inset: 0; pointer-events: none; z-index: 1; overflow: hidden; }
+.heart { position: absolute; bottom: -40px; animation: float linear forwards; opacity: .85; }
+@keyframes float { to { transform: translateY(-110vh) rotate(25deg); opacity: 0; } }

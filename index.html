@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Bhavani 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="hearts"></div>
+
+  <!-- Slide 1: Password -->
+  <section id="lock" class="slide active">
+    <div class="card">
+      <div class="gift">🎁</div>
+      <h2>A little surprise for you</h2>
+      <p class="hint">Hint: your name, in small letters 😉</p>
+      <input type="password" id="pass" placeholder="Enter password" autocomplete="off" />
+      <button id="open">Open 💌</button>
+      <p id="error"></p>
+    </div>
+  </section>
+
+  <!-- Slide 2: Wish -->
+  <section id="wish" class="slide">
+    <div class="card wide">
+      <h1 class="line l1">Happy Birthday, Bhavani! 🎂</h1>
+
+      <svg class="bouquet" viewBox="0 0 300 330" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <g id="flower">
+            <g fill="currentColor">
+              <ellipse cx="0" cy="-26" rx="14" ry="24" />
+              <ellipse cx="0" cy="-26" rx="14" ry="24" transform="rotate(60)" />
+              <ellipse cx="0" cy="-26" rx="14" ry="24" transform="rotate(120)" />
+              <ellipse cx="0" cy="-26" rx="14" ry="24" transform="rotate(180)" />
+              <ellipse cx="0" cy="-26" rx="14" ry="24" transform="rotate(240)" />
+              <ellipse cx="0" cy="-26" rx="14" ry="24" transform="rotate(300)" />
+            </g>
+            <circle r="13" fill="#ffd966" />
+            <circle r="13" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2" />
+          </g>
+          <path id="leaf" d="M0 0 C12 -18 34 -18 46 0 C34 18 12 18 0 0Z" fill="#5bbf8a" />
+        </defs>
+
+        <g stroke="#3f9e6b" stroke-width="4" stroke-linecap="round" fill="none">
+          <path d="M150 300 L150 85" />
+          <path d="M150 300 Q110 200 85 120" />
+          <path d="M150 300 Q190 200 215 120" />
+          <path d="M150 300 Q100 230 62 185" />
+          <path d="M150 300 Q200 230 238 185" />
+        </g>
+
+        <use href="#leaf" transform="translate(150 230) rotate(-35)" />
+        <use href="#leaf" transform="translate(150 215) rotate(215) scale(-1 1)" />
+        <use href="#leaf" transform="translate(120 255) rotate(-150)" />
+        <use href="#leaf" transform="translate(180 255) rotate(-30)" />
+
+        <g class="bloom d1"><g transform="translate(62 185) scale(.7)"><use href="#flower" color="#ffb3c6" /></g></g>
+        <g class="bloom d2"><g transform="translate(238 185) scale(.7)"><use href="#flower" color="#c8a2f0" /></g></g>
+        <g class="bloom d3"><g transform="translate(85 120) scale(.85)"><use href="#flower" color="#ff8fab" /></g></g>
+        <g class="bloom d4"><g transform="translate(215 120) scale(.85)"><use href="#flower" color="#ffc8dd" /></g></g>
+        <g class="bloom d5"><g transform="translate(150 78) scale(1)"><use href="#flower" color="#ff5d8f" /></g></g>
+
+        <path d="M95 285 L205 285 L172 322 L128 322Z" fill="#ffe0ec" stroke="#ffb3c6" stroke-width="2" />
+        <path d="M135 292 Q150 270 165 292 Q150 300 135 292Z" fill="#ff5d8f" />
+        <path d="M150 292 L138 318 M150 292 L162 318" stroke="#ff5d8f" stroke-width="4" stroke-linecap="round" />
+      </svg>
+
+      <p class="line l2">Stay healthy always 🌸</p>
+      <p class="line l3">You are my special one 💗</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
